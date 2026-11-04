@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Chakra+Petch:wght@500;700&display=swap');
+
+:root {
+    --cor-fundo: #101426;
+    --cor-caixa: #202b4a;
+    --cor-texto: #ffffff;
+    --cor-destaque: #00d9ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.caixa-principal {
+    background: var(--cor-caixa);
+    width: 100%;
+    max-width: 750px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #00d9ff30;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    color: var(--cor-destaque);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+button {
+    background: var(--cor-destaque);
+    color: #101426;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    transform: scale(1.03);
+}
+
+.iniciar-btn,
+.novamente-btn {
+    display: block;
+    margin: 20px auto 0;
+}
+
+.caixa-perguntas {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.caixa-alternativas button {
+    text-align: left;
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-perguntas:empty,
+.caixa-alternativas:empty {
+    display: none;
+}
+
+.tela-inicial.escondida {
+    display: none;
+}
